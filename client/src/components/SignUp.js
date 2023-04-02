@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-export default class Signup extends Component {
+export default class SignUp extends Component {
 	state = {
 		username: '',
 		email: '',
@@ -15,6 +15,7 @@ export default class Signup extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
+        this.props.signUp(this.state)
 	};
 
 	render() {

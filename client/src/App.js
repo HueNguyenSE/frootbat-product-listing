@@ -1,16 +1,40 @@
 import './App.css';
 import { Component } from 'react';
 
-import Signup from './components/SignUp';
+import SignUp from './components/SignUp';
 
 class App extends Component {
 	state = {
 		user: {},
 	};
+
+	signUp = (user) => {
+		fetch('http://localhost:3000/users', {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				user: {
+					username: user.username,
+					password: user.password,
+					email: user.email,
+				},
+			}),
+		})
+			.then((response) => response.json())
+			.then((user) => this.setState({ user: user }));
+	};
+
 	render() {
 		return (
 			<div className='App'>
-				<Signup />
+				{this.state.user.username ? (
+					<h2>Welcome {this.state.user.username}</h2>
+				) : (
+					<SignUp signUp={this.signUp} />
+				)}
 			</div>
 		);
 	}
