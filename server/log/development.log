@@ -303,3 +303,487 @@ Processing by UsersController#login as JSON
 Completed 401 Unauthorized in 6ms (Views: 0.4ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/profile" for ::1 at 2023-04-02 12:18:04 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/routes" for ::1 at 2023-04-02 12:18:38 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user_profile" for ::1 at 2023-04-02 12:18:54 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/user_profile"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/user_profile" for ::1 at 2023-04-02 12:19:08 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:27 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:37 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:19:37 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:46 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:46 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:48 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:19:48 +1000
+  
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:54 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:54 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:19:56 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:19:56 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:02 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:20:02 +1000
+  
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:08 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:08 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:12 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:20:12 +1000
+  
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:14 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:20:14 +1000
+  
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:27 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:27 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:37 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+Started GET "/profile" for ::1 at 2023-04-02 12:20:37 +1000
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:44 +1000
+  
+Started GET "/profile" for ::1 at 2023-04-02 12:20:44 +1000
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:20:58 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:20:58 +1000
+  
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:21:05 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:21:05 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:23:39 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:23:39 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:23:40 +1000
+  
+Started GET "/profile" for ::1 at 2023-04-02 12:23:40 +1000
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:23:46 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:23:46 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:23:48 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:23:48 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:24:23 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:24:23 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/login" for ::1 at 2023-04-02 12:24:37 +1000
+  
+ArgumentError (Before process_action callback :is_authorized has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/profile" for ::1 at 2023-04-02 12:27:32 +1000
+Processing by UsersController#user_profile as HTML
+Filter chain halted as :is_authorized rendered or redirected
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2023-04-02 12:27:38 +1000
+Processing by UsersController#user_profile as */*
+Filter chain halted as :is_authorized rendered or redirected
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2023-04-02 12:27:38 +1000
+Processing by UsersController#user_profile as */*
+Filter chain halted as :is_authorized rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2023-04-02 12:27:46 +1000
+Processing by UsersController#login as JSON
+  Parameters: {"user"=>{"email"=>"leo@frootbat.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leo@frootbat.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 7.4ms)
+
+
+  
+NoMethodError (undefined method `authenticated' for #<User:0x0000559bf856fba0>
+Did you mean?  authenticate):
+  
+app/controllers/users_controller.rb:23:in `login'
+Started GET "/login" for ::1 at 2023-04-02 12:27:49 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/profile" for ::1 at 2023-04-02 12:28:32 +1000
+Processing by UsersController#user_profile as */*
+Filter chain halted as :is_authorized rendered or redirected
+Started GET "/profile" for ::1 at 2023-04-02 12:28:32 +1000
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#user_profile as */*
+Filter chain halted as :is_authorized rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2023-04-02 12:28:56 +1000
+Processing by UsersController#login as JSON
+  Parameters: {"user"=>{"email"=>"leo@frootbat.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leo@frootbat.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 3.0ms)
+
+
+  
+NoMethodError (undefined method `endcode' for JWT:Module
+Did you mean?  encode):
+  
+app/controllers/users_controller.rb:24:in `login'
+Started GET "/login" for ::1 at 2023-04-02 12:29:00 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/profile" for ::1 at 2023-04-02 12:29:46 +1000
+Processing by UsersController#user_profile as */*
+Started GET "/profile" for ::1 at 2023-04-02 12:29:46 +1000
+Filter chain halted as :is_authorized rendered or redirected
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#user_profile as */*
+Filter chain halted as :is_authorized rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2023-04-02 12:29:55 +1000
+Processing by UsersController#login as JSON
+  Parameters: {"user"=>{"email"=>"leo@frootbat.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leo@frootbat.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+Completed 200 OK in 263ms (Views: 0.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/profile" for ::1 at 2023-04-02 12:29:57 +1000
+Started GET "/profile" for ::1 at 2023-04-02 12:29:57 +1000
+Processing by UsersController#user_profile as */*
+Processing by UsersController#user_profile as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/profile" for ::1 at 2023-04-02 12:30:00 +1000
+Processing by UsersController#user_profile as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for ::1 at 2023-04-02 12:30:00 +1000
+Processing by UsersController#user_profile as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
