@@ -1,44 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="product-details">
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Product name:</strong>
+    <%= @product.product_name %>
+  </p>
 
-<p>
-  <strong>Product name:</strong>
-  <%= @product.product_name %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag(@product.image, {:style => "width:300px"}) %>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @product.image %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <p>
+    <strong>Availability:</strong>
+    <%= @product.availability %>
+  </p>
 
-<p>
-  <strong>Availability:</strong>
-  <%= @product.availability %>
-</p>
+  <p>
+    <strong>Product category:</strong>
+    <%= @product.product_category %>
+  </p>
 
-<p>
-  <strong>Product category:</strong>
-  <%= @product.product_category %>
-</p>
+  <p>
+    <strong>Brand:</strong>
+    <%= @product.brand %>
+  </p>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @product.brand %>
-</p>
+  <p>
+    <strong>Gtin:</strong>
+    <%= @product.gtin %>
+  </p>
 
-<p>
-  <strong>Gtin:</strong>
-  <%= @product.gtin %>
-</p>
+  <div class="controls">
+    <%= link_to 'Edit', edit_product_path(@product) %>
+    <%= link_to 'Back', products_path %>
+  </div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
+</div>

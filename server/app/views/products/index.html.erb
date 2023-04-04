@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
-
+<%= render 'products/search' %>
+<h2><%= pluralize(@products.count, 'products') %></h2>
 <table>
   <thead>
     <tr>
@@ -22,20 +22,20 @@
       <tr>
         <td><%= product.product_name %></td>
         <td><%= product.description %></td>
-        <td><%= product.image %></td>
+        <td>
+          <%= image_tag(product.image, {:style => "width:150px"}) %>
+        </td>
         <td><%= product.price %></td>
         <td><%= product.availability %></td>
         <td><%= product.product_category %></td>
         <td><%= product.brand %></td>
         <td><%= product.gtin %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="action"><%= link_to 'Show', product %></td>
+        <td class="action"><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td class="action"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Product', new_product_path %>

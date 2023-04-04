@@ -3,7 +3,13 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+      # SEARCH
+      if params[:query].blank?
+        @products = Product.all
+      else
+        @parameter = params[:query].downcase
+        @products = Product.all.where("lower(product_name) LIKE :query", query: "%#{@parameter}%")
+      end
   end
 
   # GET /products/1 or /products/1.json
