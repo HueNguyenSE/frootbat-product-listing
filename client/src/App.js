@@ -1,13 +1,16 @@
 import './App.css';
 import { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import NavBar from './components/NavBar';
+import Products from './components/Products';
 
 class App extends Component {
 	state = {
 		user: {},
-		error: "",
+		error: '',
 	};
 
 	componentDidMount() {
@@ -77,14 +80,21 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				{this.state.user.username ? (
-					<h2>Welcome {this.state.user.username}</h2>
-				) : (
-					<>
-						<SignIn signIn={this.signIn} error={this.state.error} />
-						<SignUp signUp={this.signUp} />
-					</>
-				)}
+				<Router>
+					<NavBar />
+					<Routes>
+						<Route path='/' element={<Products />}></Route>
+						<Route path='/products' element={<Products />}></Route>
+						<Route
+							path='/signin'
+							element={<SignIn signIn={this.signIn} error={this.state.error} />}
+						></Route>
+						<Route
+							path='signup'
+							element={<SignUp signUp={this.signUp} />}
+						></Route>
+					</Routes>
+				</Router>
 			</div>
 		);
 	}
