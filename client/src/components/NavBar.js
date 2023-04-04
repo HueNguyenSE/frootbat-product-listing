@@ -22,32 +22,36 @@ export default function NavBar() {
 
 	if (!token) {
 		return (
-			<ul>
-				<li>
-					<NavLink to='/products'>Products</NavLink>
-				</li>
-				<li>
-					<NavLink to='/signin'>Sign In</NavLink>
-				</li>
-				<li>
-					<NavLink to='/signup'>Sign Up</NavLink>
-				</li>
-			</ul>
+			<nav>
+				<ul>
+					<li>
+						<NavLink to='/products'>Products</NavLink>
+					</li>
+					<li>
+						<NavLink to='/signin'>Sign In</NavLink>
+					</li>
+					<li>
+						<NavLink to='/signup'>Sign Up</NavLink>
+					</li>
+				</ul>
+			</nav>
 		);
 	} else {
 		return (
-			<ul>
-				<li>
-					<NavLink to='/products'>Products</NavLink>
-				</li>
-				<li>
-					<NavLink to='/products/new'>New Product</NavLink>
-				</li>
-				<li>
-					<SignOut />
-					<a href={'/users/' + user_id}>({username})</a>
-				</li>
-			</ul>
+			<nav>
+				<ul>
+					<li>
+						<NavLink to='/products'>Products</NavLink>
+					</li>
+					<li>
+						<NavLink to='#'>Your Account</NavLink>
+					</li>
+					<li>
+						<SignOut />
+						<a href={'/users/' + user_id}>({username})</a>
+					</li>
+				</ul>
+			</nav>
 		);
 	}
 }

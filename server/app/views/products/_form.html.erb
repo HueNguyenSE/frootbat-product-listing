@@ -12,42 +12,56 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :product_name %>
+    <strong><%= form.label :product_name %></strong>
     <%= form.text_field :product_name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <strong>
+      <%= form.label :description %>
+    </strong>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
+    <strong>
+      <%= form.label :image %>
+    </strong>
     <%= form.text_area :image %>
   </div>
 
   <div class="field">
+    <strong>
     <%= form.label :price %>
+    </strong>
     <%= form.text_field :price %>
   </div>
 
   <div class="field">
+    <strong>
     <%= form.label :availability %>
+    </strong>
     <%= form.check_box :availability %>
   </div>
 
   <div class="field">
+    <strong>
     <%= form.label :product_category %>
+    </strong>
     <%= form.text_field :product_category %>
   </div>
 
   <div class="field">
+    <strong>
     <%= form.label :brand %>
+    </strong>
     <%= form.text_field :brand %>
   </div>
 
   <div class="field">
-    <%= form.label :gtin %>
+    <strong>
+      <%= form.label :gtin %>
+    </strong>
     <%= form.text_field :gtin %>
   </div>
 
