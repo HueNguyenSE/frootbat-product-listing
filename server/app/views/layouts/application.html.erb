@@ -4,25 +4,12 @@
     <title>Server</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <h1>FROOT BAT PROJECT</h1>
-    <nav class="col-9">
-      <% if @current_user.present? %>
-        <%= link_to 'Products', products_path %>
-        <%= link_to "New Product", new_product_path %>
-        <div>
-
-            <%= link_to 'Log out', login_path, :method => 'delete'%><%= @current_user.username %>
-        </div>
-        <% else %>
-          <%= link_to 'Log in', login_path %>
-          <%= link_to 'Sign up', new_user_path %>
-      <% end %>
-    </nav>
     <%= yield %>
   </body>
 </html>
