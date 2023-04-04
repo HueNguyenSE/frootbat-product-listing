@@ -6,6 +6,7 @@ import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import NavBar from './components/NavBar';
 import Products from './components/Products';
+import AddProduct from './components/AddProduct';
 
 class App extends Component {
 	state = {
@@ -85,6 +86,7 @@ class App extends Component {
 					<Routes>
 						<Route path='/' element={<Products />}></Route>
 						<Route path='/products' element={<Products />}></Route>
+						<Route path='/products/new' element={<AddProduct />}></Route>
 						<Route
 							path='/signin'
 							element={<SignIn signIn={this.signIn} error={this.state.error} />}

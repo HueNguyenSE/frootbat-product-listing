@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <h1>Frootbat Administrator</h1>
+    </div>
+    <div class="signup">
+        <div>
+            <h2>Create a new account</h2>
+            <p>It's quick and easy.</p>
+        </div>
+        <% if @user.errors.any? %>
+        <ol>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li class="error"><%= msg %></li>
+            <% end %>
+        </ol>
+        <% end %>
+        <%= form_for @user do |f| %>
+            <%= f.email_field :email, placeholder: "Email address" %>
+            <%= f.password_field :password, placeholder: "New password" %>
+            <%= f.password_field :password_confirmation, placeholder: "Password confirmation" %>
+            <%= f.submit 'Sign up', class: "btn-signup" %>
+        <% end %>
+        <a href="/login">Already have an account?</a>
+    </div>
+
+</div>

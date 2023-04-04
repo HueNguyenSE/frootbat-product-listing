@@ -1,31 +1,19 @@
 class UsersController < ApplicationController
-  skip_before_action :is_authorized, only: [:create, :login, :index]
-
-  def user_profile
-    render json: @user
-  end
-
   def index
     @users = User.all
+  end
 
-    render json: @users
+  def new
+    @user = User.new
   end
 
   def create
-    @user = User.create(user_params)
-
-    render json: @user, status: :created
-  end
-
-  def login
-    @user = User.find_by(email: params[:user][:email])
-
-    if @user && @user.authenticate(params[:user][:password])
-      @token = JWT.encode({user_id: @user.id, username: @user.username}, Rails.application.secrets.secret_key_base[0])
-
-      render json: { user: @user, token: @token}
+    @user = User.new user_params
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to home_path
     else
-      render json: {error: 'Invalid Credentials. Try again'}, status: :unauthorized
+      render :new
     end
   end
 

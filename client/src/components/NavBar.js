@@ -41,7 +41,7 @@ export default function NavBar() {
 					<NavLink to='/products'>Products</NavLink>
 				</li>
 				<li>
-					<NavLink to='/new-product'>New Product</NavLink>
+					<NavLink to='/products/new'>New Product</NavLink>
 				</li>
 				<li>
 					<SignOut />

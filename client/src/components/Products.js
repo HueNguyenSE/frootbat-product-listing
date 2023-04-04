@@ -10,8 +10,6 @@ if (token) {
 	headers.Authorization = `Bearer ${token}`;
 }
 
-const isLoggedIn = token !== null;
-
 export default class Products extends Component {
 	state = {
 		products: [],
@@ -21,7 +19,7 @@ export default class Products extends Component {
 		const fetchProducts = () => {
 			axios.get(PRODUCTS_URL).then((response) => {
 				this.setState({ products: response.data });
-				console.log('products', response.data[0]);
+				// console.log('products', response.data);
 			});
 		};
 		fetchProducts();
@@ -29,11 +27,15 @@ export default class Products extends Component {
 
 	render() {
 		const products = this.state.products;
+		// console.log(`products ${products.length}`);
+		// only products in stock
+		const instockProducts = products.filter((p) => p.availability);
+		// console.log(`in stock products: ${instockProducts.length}`);
 		const isLoggedIn = token !== null;
 		if (isLoggedIn) {
 			return (
 				<div>
-					<h1>All Products</h1>
+					<h1>All Products (Only for Adminstrator)</h1>
 					<table>
 						<thead>
 							<tr>
@@ -46,6 +48,7 @@ export default class Products extends Component {
 								<th>Product category</th>
 								<th>Brand</th>
 								<th>Gtin</th>
+								<th>Actions</th>
 							</tr>
 						</thead>
 
@@ -64,6 +67,10 @@ export default class Products extends Component {
 										<td>{p.product_category}</td>
 										<td>{p.brand}</td>
 										<td>{p.gtin}</td>
+										<td>
+											<p><a href='#'>Edit</a></p>
+											<p><a href='#'>Delete</a></p>
+										</td>
 									</tr>
 								);
 							})}
@@ -74,7 +81,7 @@ export default class Products extends Component {
 		} else {
 			return (
 				<div>
-					{products.map((p) => {
+					{instockProducts.map((p) => {
 						return (
 							<div>
 								<img src={p.image} alt={p.produt_name} />
