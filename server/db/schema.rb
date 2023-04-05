@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_02_025608) do
+ActiveRecord::Schema.define(version: 2023_04_05_055310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2023_04_02_025608) do
     t.text "description"
     t.text "image"
     t.string "price"
-    t.boolean "availability"
+    t.boolean "availability", default: false
     t.string "product_category"
     t.string "brand"
     t.string "gtin"

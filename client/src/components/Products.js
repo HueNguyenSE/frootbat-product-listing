@@ -30,7 +30,10 @@ export default class Products extends Component {
 		// console.log(`products ${products.length}`);
 		// only products in stock
 		const instockProducts = products.filter((p) => p.availability);
-		// console.log(`in stock products: ${instockProducts.length}`);
+		const outstockProducts = products.filter((p) => !p.availability);
+		console.log('out stock', outstockProducts.length);
+		console.log(products[8]?.availability);
+		console.log(`in stock products: ${instockProducts.length}`);
 		// const isLoggedIn = token !== null;
 		// if (isLoggedIn) {
 		return (

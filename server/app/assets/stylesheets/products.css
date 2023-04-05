@@ -62,10 +62,11 @@ a {
     font-weight: 900;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"], input[type="email"]{
     width: 80%;
     max-width: 800px;
     height: 30px;
+    margin-bottom: 10px;
 }
 
 textarea {
@@ -76,6 +77,8 @@ textarea {
 input[type="submit"] {
     height: 30px;
     padding: 4px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .controls {
@@ -91,8 +94,9 @@ strong {
     font: 16px;
 }
 
-.product-details {
+.product-details, .auth-form {
     width: 80%;
     max-width: 900px;
     margin: 0 auto;
 }
+
