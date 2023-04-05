@@ -2,8 +2,6 @@ import './App.css';
 import { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
 import NavBar from './components/NavBar';
 import Products from './components/Products';
 
@@ -80,19 +78,17 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
+				<h1>FROOTBAT PROJECT</h1>
 				<Router>
 					<NavBar />
+					<h2>Any Bottle, Anywhere</h2>
+					{/* <form>
+						<input type='search' placeholder='Search for products...' />
+						<input type='submit' value='Search' />
+					</form> */}
 					<Routes>
 						<Route path='/' element={<Products />}></Route>
 						<Route path='/products' element={<Products />}></Route>
-						<Route
-							path='/signin'
-							element={<SignIn signIn={this.signIn} error={this.state.error} />}
-						></Route>
-						<Route
-							path='signup'
-							element={<SignUp signUp={this.signUp} />}
-						></Route>
 					</Routes>
 				</Router>
 			</div>
