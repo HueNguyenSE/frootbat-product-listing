@@ -80,28 +80,21 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<div className='app-container'>
-					<nav>
-						<h1>FROOT BAT PROJECT</h1>
-						
-					</nav>
-					<Router>
-						<Routes>
-							<Route path='/' element={<Products />}></Route>
-							<Route path='/products' element={<Products />}></Route>
-							<Route
-								path='/signin'
-								element={
-									<SignIn signIn={this.signIn} error={this.state.error} />
-								}
-							></Route>
-							<Route
-								path='signup'
-								element={<SignUp signUp={this.signUp} />}
-							></Route>
-						</Routes>
-					</Router>
-				</div>
+				<Router>
+					<NavBar />
+					<Routes>
+						<Route path='/' element={<Products />}></Route>
+						<Route path='/products' element={<Products />}></Route>
+						<Route
+							path='/signin'
+							element={<SignIn signIn={this.signIn} error={this.state.error} />}
+						></Route>
+						<Route
+							path='signup'
+							element={<SignUp signUp={this.signUp} />}
+						></Route>
+					</Routes>
+				</Router>
 			</div>
 		);
 	}
