@@ -1,15 +1,9 @@
 class ProductsController < ApplicationController
+  before_action :check_for_login, only: [:idnex]
   before_action :set_product, only: %i[ show edit update destroy ]
 
   # GET /products or /products.json
   def index
-      # # SEARCH
-      # if params[:query].blank?
-      #   @products = Product.all
-      # else
-      #   @parameter = params[:query].downcase
-      #   @products = Product.all.where("lower(product_name) LIKE :query", query: "%#{@parameter}%")
-      # end
       search = params[:query].present? ? params[:query] : nil
       @products = if search
         Product.search(search)
