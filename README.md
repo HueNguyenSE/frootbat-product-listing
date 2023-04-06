@@ -2,6 +2,14 @@
 
 Frootbat product listing is a simple product listing application built with React and Ruby on Rails. The application allows non-login users to view in stocks products in the client and login users can view, create, modify, and delete products in the backend.
 
+## QUICK VIEW
+
+**FRONTEND**
+Only show in stock products in the client
+![Frontend]("../public/assets/frontend-showpage.png")
+
+**BACKEND**
+![Backend](https://youtu.be/vggNO2FJWOA)
 ## TECH STACK
 
 - Frontend: ReactJS
@@ -57,8 +65,7 @@ If you are using Ubuntu 22, there is a good instruction by Digital Ocean here: h
    ```
 
 6. Start the client by running the following command in the client directory:
-   `    npm run start
-   `
+   `   npm run start`
    Type 'yes' to continue.
 
 ## FEATURES
