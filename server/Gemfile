@@ -57,3 +57,5 @@ gem 'crack'
 
 gem "searchkick"
 gem "elasticsearch", "~> 7.10"
+
+gem 'jquery-rails'

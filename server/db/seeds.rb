@@ -42,5 +42,5 @@ puts "#{Product.count} products successfully created"
 
 
 User.destroy_all
-User.create(:username => "Admin", :email => "admin@gmail.com" :password => "admin")
+User.create(:username => "Admin", :email => "admin@gmail.com", :password => "admin")
 puts "#{User.count} users successfully created"

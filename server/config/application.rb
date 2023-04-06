@@ -32,7 +32,6 @@ module Server
 
     config.elasticsearch_url = ENV['ELASTICSEARCH_URL'] || 'http://localhost:9200'
 
-
     # Configure rack::cors
     config.middleware.insert_before 0, Rack::Cors do
       allow do

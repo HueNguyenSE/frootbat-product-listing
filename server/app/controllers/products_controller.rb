@@ -70,6 +70,16 @@ class ProductsController < ApplicationController
     end
   end
 
+  def autocomplete
+    render json: Product.search([:query], {
+      fields: ["product_name", "product_category", "description", "gtin", "price"],
+      match: :word_start,
+      limit: 10,
+      load: false,
+      mispellings: {below: 5}
+    }).map(&:product_name)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product

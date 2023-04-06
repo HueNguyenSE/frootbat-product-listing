@@ -1,5 +1,16 @@
-<%= form_tag(products_path, method: :get) do %>
-  <%= label_tag(:query, "Search for products:") %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag("Search") %>
+<%= form_tag(products_path, method: :get, class: "form-inline", role: 'search') do %>
+  <div class="input-group">
+    <%= label_tag(:query, "Search for products:") %>
+    <%= text_field_tag :query,
+        params[:query],
+        id: 'products_search',
+        autocomplete: :off,
+        class: 'form-control'
+    %>
+    <div class="'input-group-btn search panel">
+      <%= link_to 'Clear', root_url, class: "btn btn-default" %>
+      <%= submit_tag 'Search', name: nil, class: "btn btn-default" %>
+    </div>
+  </div>
+
 <% end %>
