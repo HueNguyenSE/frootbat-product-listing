@@ -5,6 +5,7 @@ Frootbat product listing is a simple product listing application built with Reac
 - Frontend: ReactJS
 - Backend: Ruby on Rails
 - Database: PostgreSQL
+- Search engine: Elasticsearch
 - Version control: Git
 ## PROJECT SETUP AND INSTALLATION
 *The installation requirements for the project*:
@@ -37,12 +38,17 @@ To run the frootbat-product-listing application, you will need to follow these s
     ```
     These commands will create the database, run the necessary migrations, and seed the database with sample data.
 
-4. Start the server by running the following command in the server directory:
+4. Install Elasticsearch
+You can find the instructions on their page at https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
+
+If you are using Ubuntu 22, there is a good instruction by Digital Ocean here: https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
+
+5. Start the server by running the following command in the server directory:
     ```
     rails s
     ```
 
-5. Start the client by running the following command in the client directory:
+6. Start the client by running the following command in the client directory:
     ```
     npm run start
     ```
@@ -74,8 +80,8 @@ Type 'yes' to continue.
 **BACKEND**
 - Navigate to http://localhost:3000 in your browser to view the application.
 - Use the following credentials to login
-    email: leo@frootbat.com
-    password: leo
+    email: admin@gmail.com
+    password: admin
 - Or you can sign up using any email address
 - Feel free to play around with searching, creating, updating, and deleting products.
 
@@ -87,6 +93,11 @@ Type 'yes' to continue.
 To load xml data into the database, I used gem `crack` to read the data. Alternative gem that many people suggest is `nokogiri` ; however, I found `crack` is easier to use.
 I might write more details about using `crack` for seeding data from a file to database in a blog post.
 
-2.
+2. Elasticsearch and Searchkick
+- Installing Elasticsearch engine locally is very painful.
+I found [Digitalocean's installation instructions](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-22-04) super helpful
 
+The instructions are applicable for Ubuntu 22.04. If you are using other OS, please refer to the Elasticsearch documentation for more information.
+
+I have choosen gem `searchkick` to enable searching feature in this project. For more information, you can check its [documentation](https://www.rubydoc.info/github/ankane/searchkick#getting-started)
 
