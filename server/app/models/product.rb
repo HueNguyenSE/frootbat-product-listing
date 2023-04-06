@@ -4,4 +4,6 @@ class Product < ApplicationRecord
   validates :price, :presence => true
   validates :image, :presence => true
 
+  searchkick
+
 end

@@ -1,4 +1,5 @@
 <%= form_tag(products_path, method: :get) do %>
-    <%= text_field_tag :query, params[:query], placeholder: "Search product name" %>
-    <%= submit_tag ("Search") %>
+  <%= label_tag(:query, "Search for products:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
 <% end %>
