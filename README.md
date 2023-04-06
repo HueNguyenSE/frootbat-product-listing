@@ -8,6 +8,7 @@ Frootbat product listing is a simple product listing application built with Reac
 - Backend: Ruby on Rails
 - Database: PostgreSQL
 - Search engine: Elasticsearch
+- Authentication: JWT
 - Version control: Git
 
 ## PROJECT SETUP AND INSTALLATION
