@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :is_authorized
 
   def is_authorized
-    check_for_login unless is_signed_in
+    check_for_login unless is_signed_in || request.format.json?
   end
 
   private
